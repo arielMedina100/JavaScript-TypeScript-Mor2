@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        let numbers = [10, 20, 30, 40, 50, 60];
+        let animals = ['Dog', 'Cat', 'Bird', 'Giraffe', 'Panda', 'Hen'];
+        for (let i = 0; i < animals.length; i++) {
+            let fontSize = numbers[i % numbers.length];
+            let animalName = animals[i];
+            let p = document.createElement('p');
+            p.textContent = animalName;
+            p.style.fontSize = `${fontSize}px`;
+            document.body.appendChild(p);
+        }
+    </script> -->
+    <div id="animallist"></div>
+    <script>
+        let sizes = [10, 20, 30, 40, 50, 60];
+        let Animals = ['Dog', 'Cat', 'Bird', 'Giraffe', 'Panda', 'Hen'];
+        for (let i in sizes) {
+            document.getElementById('animallist').innerHTML += `<p style="font-size: ${sizes[i]}px">${Animals[i]}</p>`;
+        }
+    </script>
+</body>
+
+</html>

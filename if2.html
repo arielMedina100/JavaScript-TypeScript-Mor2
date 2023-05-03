@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>grades system</h1>
+    <label for="grade">grade:</label>
+    <input type="text" id="grade" placeholder="Please enter a grade">
+    <button onclick="check()">check</button>
+    <p id="result"></p>
+    <script>
+        function check() {
+            let grade = document.getElementById("grade").value;
+            if (grade < 0 || grade > 100) {
+                document.getElementById("result").innerText = "Wrong input";
+                document.getElementById("result").style.color = "gray";
+            } else if (grade < 55) {
+                document.getElementById("result").innerText = "Youve failed the test";
+                document.getElementById("result").style.color = "red";
+            } else {
+                document.getElementById("result").innerText = "Youve passed the test";
+                document.getElementById("result").style.color = "green";
+            }
+        }
+    </script>
+</body>
+
+</html>

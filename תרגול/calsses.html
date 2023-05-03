@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //classes
+        let college = {
+            name: "Hackeru",
+            students: [
+                { id: 1, name: "Yossi", grade: 82 },
+                { id: 2, name: "David", grade: 78 },
+                { id: 3, name: "Dana" },
+            ],
+        };
+
+        //es5-js canilla = 2009
+        function student(id, name) {
+            this.id = 10;
+            this.name = "Yossi";
+            this.college = 'Hackeru';
+            this.getDetails = function () {
+                console.log(`student id  is: ${this.id}, name is: ${this.name}`);
+            };
+        }
+        let student1 = new student(1, 'Yossi');
+        console.log(student1);
+        let student2 = new student(2, 'David');
+        console.log(student2);
+        // array of students
+        let studentsArray = [
+            new student(3, 'oved'),
+            new student(4, 'seva'),
+            new student(5, 'ofek'),
+        ];
+        console.log(studentsArray);
+        console.table(studentsArray);
+        student2.getDetails();
+        studentsArray[2].getDetails();
+        console.log("-------------");
+
+
+        for (let student of studentsArray) student.getDetails();
+
+        // כתבו מחלקה המייצגת יוזר, לכל יוזר יש שם, אימייל וסיסמה
+        // במחלקה הגדירו בנאי שמאתחל את משתני המחלקה
+        // הגדירו מתודה שתפקידה להדפיס לקונסול את כל פרטי היוזר ללא הסיסמה
+        //הגידרו מתודות שתפקידן להחזיר את משתני המחלקה ולעדכן אותם
+        function user(_name, _email, _password) {
+            this.name = _name;
+            this.email = _email;
+            this.password = _password || "*****";
+            this.getDetails = function () {
+                console.log(`name is: ${this.name} and email is: ${this.email}`);
+
+                this.getName = function () {
+                    return this.name;
+                };
+                this.getpassword = function () {
+                    if (user.type == "admin") return this.password;
+                };
+                this.setName = function (newName) {
+                    this.name = newName;
+                }
+            };
+        }
+        let users = [
+            new user("Shalom", "shalom@gmail.com", "12345678"),
+            new user("Shoval", "shoval@gmail.com", "abcd123"),
+            new user('mor', 'mor@gmail.com'),
+        ];
+
+        for (let user of users) user.getDetails();
+
+        console.log(users[0].password);
+        console.log(users[0].getName());
+        console.log(users[0].setName());
+        console.log(users[0].setName('Ravit'));
+        console.log(users[0]);
+        /* for (let user of users) {
+            console.log(user.name, user.email, user.email);
+        } */
+
+
+        function Student(_id, _name) {
+            this.id = _id || 1;
+            this.name = _name || 'mor';
+            this.getName = function () {
+                return this.name;
+            };
+            this.setId = function (newId) {
+                this.id = newId;
+            };
+        }
+        var shir = new Student(undefined, undefined);
+        var yoav = new Student(10, "");
+        console.log((shir, yoav));
+
+        let Student3 = function (id, name) {
+            this.id = id
+            this.name = name
+            this.get = function (propName) {
+                return this[propName];
+            };
+            this.set = function (propName, value) {
+                this[propName] = value;
+            };
+        };
+        let s1 = new Student3(6, 'Chani');
+        console.log(s1.get('name'));
+        console.log(s1.get('id'));
+        s1.set("id", 26);
+        s1.set('name', 'Noam');
+        console.log(s1);
+
+
+
+    </script>
+</body>
+
+</html>

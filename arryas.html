@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let names = ['yuval', 'shir', 'avi'];
+        let prices = [20, 84, 70];
+        let data = [12, 'mor', true];
+        console.log(names[1]);
+        //names[3] = 'yoav';
+
+        // add to array's end
+        names.push('yoav');
+
+        //add to array's start
+        names.unshift('ron');
+        console.log(names);
+
+        //delete from the end
+        names.pop();
+        console.log(names);
+
+        //delete from the start
+        names.shift();
+        console.log(names);
+
+        //find index
+        console.log(prices.indexOf(84));
+        console.log(prices.indexOf(100));
+
+        console.log(names.toString());
+
+        //splice
+        let students = ['yale', 'david'];
+        //splice(startindex, how many to remove,..to add)
+        //add 2 new students to start
+        students.splice(0, 0, 'gilad', 'asher');
+        console.log(students);
+
+        //remove 1 from start
+        students.splice(0, 1, 'ariel');
+        console.log(students);
+
+        students.splice(students.length, 0, 'michal');
+        console.log(students);
+    </script>
+</body>
+
+</html>

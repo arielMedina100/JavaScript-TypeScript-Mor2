@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>CALCULATOR</h1>
+    <label for="price">Price:</label>
+    <input type="number" id="price" />
+    <label for="discount">Discount:</label>
+    <input type="number" id="discount" />
+    <button onclick="calc()">Calculate</button>
+    <button onclick="reset()">Reset</button>
+    <p id="result"></p>
+    <script>
+        function calc() {
+            let result =
+                document.getElementById("price").value -
+                (document.getElementById("price").value *
+                    document.getElementById("discount").value) /
+                100;
+
+            document.getElementById("result").innerText =
+                "The final price is: " + result;
+        }
+
+        function reset() {
+            document.getElementById("price").value = "";
+            document.getElementById("discount").value = "";
+            document.getElementById("result").innerText = "";
+        }
+    </script>
+</body>
+
+</html>

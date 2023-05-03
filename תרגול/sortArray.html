@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //sort
+        //למיין את כל ערכי המערך
+        let cities = ['madrid', 'paris', 'london',];
+        cities.sort();
+        console.log(cities);
+        //מיינו את המספרים הבאים
+        let numbers = [10, 45, 31, 100, 95]
+        numbers.sort(function (num1, num2) {
+            return num1 - num2;
+        });
+        console.log(numbers);
+        let fruits = ["banana", "melon", "kiwi", "orange", "apple", "cherry"];
+        function sortMoreFive(arr) {
+            let arrAfter = arr.filter(function (item) {
+                return item.length >= 5;
+            });
+            arrAfter.sort();
+            return arrAfter;
+        };
+        console.log(sortMoreFive(fruits));
+    </script>
+</body>
+
+</html>

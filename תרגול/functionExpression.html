@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //function expression
+        //ביטוי פונקציה
+        //func();
+        let func = function () {
+            console.log('hello');
+        };
+        func = function () {
+            console.log('oved');
+        }
+        func();
+        func();
+
+        //כתבו פונקציה שמקבלת מספר ובודקת האם הוא זוגי או אי זוגי
+        //ternary
+        //function expression
+        let EvenOrOdd = function (num) {
+            return num % 2 == 0 ? 'Even' : 'Odd'
+        };
+        console.log(EvenOrOdd(21));
+        console.log(EvenOrOdd(46));
+
+        let countEven = function (arr) {
+            let counter = 0
+            for (let num of arr) {
+                if (num % 2 == 0) counter++;
+            }
+            return counter
+        };
+        console.log(countEven([20, 41, 84, 51, 17, 8, 9, 11, 56, 54]));
+
+        let countEvenNumAndIndex = function (arr) {
+            let counter = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] % 2 == 0 && i % 2 == 0) counter++;
+            }
+            return counter;
+        };
+
+        console.log(countEvenNumAndIndex([12, 3, 6, 8, 10]));
+        for (let i in [12, 13, 14]) {
+            console.log(i);
+        }
+        function myfunc(str1) {
+            return function (str2) {
+                return str1 + str2;
+            };
+        }
+        console.log(myfunc('my name is ')('mor'));
+
+        //self invoking functions
+        (function () {
+            console.log('Good Noon');
+        })();
+        let zeros = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        let secret = function (num) {
+            while (num > 0) {
+                zeros[num % 10]++;
+                num = Math.floor(num / 10);
+                console.log(num);
+            }
+        };
+        secret(2445);
+        console.log(zeros);
+
+        const length = 4;
+        const numbers = [];
+        for (var i = 0; i < length; i++); {
+            numbers.push(i + 1);
+        } console.log(numbers);
+    </script>
+</body>
+
+</html>

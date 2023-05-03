@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX5 - question 4</title>
+</head>
+
+<body>
+    <img id="flower" src="/תרגול/pictures/blue.jpg" alt="" width="412">
+    <br />
+    <img src="/תרגול/pictures/blue.jpg" alt="" width="100" height="100">
+    <img src="/תרגול/pictures/green.jpg" alt="" width="100" height="100">
+    <img src="/תרגול/pictures/orange.jpg" alt="" width="100" height="100">
+    <img src="/תרגול/pictures/pink.jpg" alt="" width="100" height="100">
+    <br />
+    <button onclick="back()">back</button>
+    <button onclick="next()">next</button>
+    <style>
+        img {
+            object-fit: cover;
+        }
+
+        button {
+            margin-right: 20rem;
+        }
+    </style>
+    <script>
+        let images = ["/תרגול/pictures/blue.jpg", "/תרגול/pictures/green.jpg", "/תרגול/pictures/orange.jpg", "/תרגול/pictures/pink.jpg"];
+        let counter = 0;
+
+        function next() {
+            counter++;
+            document.getElementById("flower").src = images[counter % 4];
+        }
+    </script>
+</body>
+
+</html>

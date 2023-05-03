@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let prices = [20, 40, 15, 36];
+        let pricesAfterDiscount = [];
+        for (let price of prices) {
+            pricesAfterDiscount.push(price * 0.5);
+        }
+        console.log(pricesAfterDiscount);
+
+        //map
+        //מתודה של מערכים שמאפשרת לנו לבצע מניפולציה על איברי המערך ומחזירה לנו מערך חדש לאחר שינויים
+        prices.map(function (price) {
+            return price * 0.5
+        });
+        console.log(pricesAfterDiscount);
+        let cities = [' eilat', 'haifa', 'tel aviv']
+        let citiesAfterMani = cities.map(function (city) {
+            return city.trim();
+        });
+        console.log(citiesAfterMani);
+
+        let storePrices = [60.99, 130, 47, 174, 251, 195];
+        let pricesAfter20Discount = storePrices.map(function (price) {
+            return (price * 0.8).toFixed(2)
+        });
+        console.log(pricesAfter20Discount);
+    </script>
+</body>
+
+</html>

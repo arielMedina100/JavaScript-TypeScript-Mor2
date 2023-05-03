@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //reduce
+        // עוברת על כל איברי המערך ומפיקה איזשהו ערך בודד ממנו
+        let prices = [240, 184.123, 171];
+        function findsum(arr) {
+            let sum = 0;
+            for (let num of arr) sum += sum;
+            return sum;
+        };
+        console.log(findsum(prices));
+        let sum = prices.reduce(function (total, value) {
+            return total + value
+        });
+
+        console.log("the total sum of prices is", sum);
+    </script>
+</body>
+
+</html>

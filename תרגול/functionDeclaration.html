@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //function declaration
+        //פונקציה שלא מקבלת פרמטר ולא מחזירה ערך
+        function printMyName() {
+            console.log("Ariel");
+        }
+        printMyName();
+
+        //פונקציה שמקבלת פרמטר ולא מחזירה ערך
+        function printUserName(username) {
+            console.log(username);
+        }
+        printUserName('Duby')
+        // פונקציה שלא מקבלת פרמטר אך מחזירה ערך
+        function calcSum() {
+            let prices = [20, 57, 89, 140];
+            let sum = 0;
+            for (let price of prices) sum += price;
+            return sum
+        } console.log(calcSum());
+
+        // פונקציה שמקבלת פרמטר ומחזירה ערך
+        function findmin(arr) {
+            if (arr.length == 0) return null;
+            let mini = arr[0];
+            for (var i = 1; i < arr.length; i++) {
+                if (arr[i] < mini) mini = arr[i];
+            } console.log(i);
+            return mini
+        } console.log(findmin([11, 7, 3, -9]));
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="food"></h2>
+    <h2 id="money"></h2>
+    <h2 id="name"></h2>
+    <button onclick="buyfood()">buy food</button>
+    <button onclick="getmoney()">ask for money</button>
+    <script>
+        let food = 0, money = 100;
+        document.getElementById("money").innerHTML = "Money: " + money;
+        document.getElementById("food").innerHTML = "Food: " + food;
+        function buyfood() {
+            food += 1;
+            document.getElementById("food").innerHTML = "Food: " + food;
+            money -= 5;
+            document.getElementById("money").innerHTML = "Money: " + money;
+        }
+
+        function getmoney() {
+            food -= 1;
+            document.getElementById("food").innerHTML = "Food: " + food;
+            money += 5;
+            document.getElementById("money").innerHTML = "Money: " + money;
+        }
+    </script>
+</body>
+
+</html>

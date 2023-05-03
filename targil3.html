@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let prices = [20, 50, 140];
+
+        // console -> original price: 20, price after 50% discount: 10
+
+        // for in
+        for (let i in prices) {
+            console.log(
+                `original price: ${prices[i]}, price after discount: ${prices[i] / 2}`
+            );
+        }
+
+        // for of
+        for (let price of prices) {
+            console.log(
+                `original price: ${price}, price after discount: ${price / 2}`
+            );
+        }
+
+
+        function calcsum(arr) {
+            let sum = 0;
+            for (let num of arr) {
+                sum += num;
+            }
+            return sum;
+        }
+        console.log(calcsum(prices));
+        console.log(calcsum([1, 2, 3]));
+        function calcavg(arr) {
+            let sum = 0;
+            for (let i in arr) {
+                sum += arr[i];
+            }
+            return sum / arr.length;
+        }
+        console.log(calcavg([51, 25, 74]));
+        let myname = "ariel";
+        console.log(myname[1]);
+        for (let char of myname) console.log();
+        var password = "drowssaprepus";
+        var secret = "";
+        for (i = password.length - 1; i >= 0; i--) {
+            secret += password[i];
+        }
+        console.log(secret);
+        // max
+        function findmax(arr) {
+            let maxi;
+            if (arr.length == 0) maxi = null;
+            else {
+                let maxi = arr[0];
+                //loop
+                for (let i = 1; i < arr.length; i++) {
+                    if (maxi < arr[i]) maxi = arr[i]
+                }
+            } return maxi;
+        }
+        console.log(findmax([]));
+        console.log(findmax([-1, 50, 104]));
+        console.log(findmax([-1, -90, -40]));
+    </script>
+</body>
+
+</html>

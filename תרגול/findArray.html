@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //find
+        let cities = ['haifa', 'tel aviv', 'jerusalem', 'ashdod'];
+        let cityLengthBiggerThan7 = cities.find(function (city) {
+            return city.length > 7;
+        });
+        console.log((cityLengthBiggerThan7));
+
+        let names = ['avi', 'gil', 'adam', 'shira'];
+        let nameWithx = names.find(function (name) {
+            return name.includes("x");
+        });
+        console.log(nameWithx);
+    </script>
+</body>
+
+</html>

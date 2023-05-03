@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="Ariel">good morning</div>
+    <script>
+        document.getElementById("Ariel").innerText = "ariel";
+        document.getElementById("Ariel").innerHTML = "<h1>hacker</h1>";
+    </script>
+    <img id="logo2" src="" alt="">
+    <!-- varibales -->
+    <script>
+        let age = 22;
+        age = "22";
+        let isAdmin = true;
+        let myName;
+        console.log(myName);
+        let city = null;
+        console.log(city);
+    </script>
+    <!-- string interpolation -->
+    <script>
+        let price = 60;
+        let discount = 10;
+        console.log("the final price is " + (price * (100 - 10)) / 100);
+        console.log(`the final price is ${(price * (100 - discount)) / 100}`);
+    </script>
+
+</html>

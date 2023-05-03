@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Ariel Medina</h1>
+    <p id="city">אשקלון</p>
+    <p>חודשי השנה</p>
+    <script>
+        document.getElementById('city').style.fontWeight = 'bold';
+    </script>
+    <p id="animal">Lion</p>
+    <button id="changeBtn">Change</button>
+
+    <script>
+        let button = document.getElementById("changeBtn");
+        let animal = document.getElementById("animal");
+
+        button.addEventListener("click", function () {
+
+            document.body.style.backgroundColor = "blue";
+            animal.style.color = "white";
+        }
+        );
+    </script>
+    <h2 id="ha">Choose your favorite color:</h2>
+    <button id="red">red</button>
+    <button id="green">green</button>
+    <button id="blue">blue</button>
+    <script>
+        let red = document.getElementById('red');
+        let green = document.getElementById('green');
+        let blue = document.getElementById('blue');
+        red.addEventListener('click', function () {
+            ha.style.color = 'red';
+        })
+        green.addEventListener('click', function () {
+            ha.style.color = 'green';
+        })
+        blue.addEventListener('click', function () {
+            ha.style.color = 'blue';
+        })
+    </script>
+    <br><br><br>
+    <img src="./pictures/facebook.jpg" alt="" id="">
+    <img src="" alt="" id="">
+    <img src="" alt="" id="">
+    <button id="facebook"></button>
+    <button id="instegram"></button>
+    <button id="twitter"></button>
+    <script>
+
+    </script>
+</body>
+
+</html>
